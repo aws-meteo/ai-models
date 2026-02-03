@@ -178,3 +178,7 @@ dev/
 *.out
 _version.py
 *.tar
+
+# Credentials
+.ecmwfapirc
+.cdsapirc

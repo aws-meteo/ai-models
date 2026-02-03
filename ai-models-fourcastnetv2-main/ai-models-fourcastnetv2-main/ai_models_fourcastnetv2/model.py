@@ -143,7 +143,7 @@ class FourCastNetv2(Model):
         model.zero_grad()
         # Load weights
 
-        checkpoint = torch.load(checkpoint_file, map_location=self.device)
+        checkpoint = torch.load(checkpoint_file, map_location=self.device, weights_only=False)
 
         weights = checkpoint["model_state"]
         drop_vars = ["module.norm.weight", "module.norm.bias"]
